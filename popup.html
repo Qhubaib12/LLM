@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Page Edit Saver</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="logo">PES</div>
+      <div>
+        <h1>Page Edit Saver</h1>
+        <p id="pageUrl" class="url">Loading current tab…</p>
+      </div>
+    </header>
+
+    <section class="stats">
+      <span><strong id="savedCount">0</strong> saved pages</span>
+      <span id="savedState" class="pill">Checking…</span>
+    </section>
+
+    <section class="actions">
+      <button id="saveBtn" class="primary">Save Current Page</button>
+      <button id="restoreBtn">Restore Saved Version</button>
+      <button id="deleteBtn" class="danger">Delete Saved Version</button>
+    </section>
+
+    <label class="toggle">
+      <input id="disableToggle" type="checkbox" />
+      <span>Disable restoration on this URL</span>
+    </label>
+
+    <section class="io">
+      <button id="exportBtn">Export JSON</button>
+      <label class="fileButton" for="importFile">Import JSON</label>
+      <input id="importFile" type="file" accept="application/json,.json" />
+    </section>
+
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
